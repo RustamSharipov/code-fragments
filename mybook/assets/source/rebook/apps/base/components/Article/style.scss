@@ -1,0 +1,56 @@
+@import "rebook/apps/base/style/_variables";
+
+.article {
+  font-family: $font-base;
+
+  a {
+    color: $color-dark-active;
+  }
+
+  li {
+    margin-left: 42px;
+    margin-bottom: 12px;
+    line-height: 1.4em;
+    color: $color-text-base;
+  }
+
+  ol {
+    list-style-position: outside;
+
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  ul {
+    list-style-position: outside;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    margin: 16px 16px 32px 24px;
+    padding: 0;
+    color: $color-light-text;
+    font-size: 16px;
+    line-height: 1.4em;
+
+    &::before {
+      content: "«";
+      position: absolute;
+      top: 0;
+      left: -12px;
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

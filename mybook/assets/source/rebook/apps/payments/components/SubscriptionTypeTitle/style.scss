@@ -1,0 +1,51 @@
+@import "rebook/apps/base/style/_variables";
+
+.subscriptionType {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:global(.themeStandard) {
+    background-image: linear-gradient(to right, $payments-standard-dark 0, $payments-standard-light 100%);
+  }
+
+  &:global(.themePremium) {
+    background-image: linear-gradient(to right, $payments-premium-dark 0, $payments-premium-light 100%);
+  }
+
+  &Title {
+    width: 50%;
+  }
+
+  &Icon {
+    position: relative;
+    width: 25%;
+    text-align: right;
+
+    &Image {
+      width: 80px;
+      height: 80px;
+    }
+
+    &Gift {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
+      background: url("./images/gift.svg") center center no-repeat;
+    }
+
+    @media (min-width: $md-md) {
+      &Image {
+        width: 56px;
+        height: 56px;
+      }
+
+      &Gift {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

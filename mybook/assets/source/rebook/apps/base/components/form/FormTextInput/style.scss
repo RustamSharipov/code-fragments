@@ -1,0 +1,78 @@
+@import "rebook/apps/base/style/_variables";
+
+.formTextInput {
+  display: block;
+}
+
+.control {
+  display: block;
+  margin-top: 8px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: $bg-input;
+  border: 2px solid transparent;
+  outline: none;
+  transition: all 0.25s;
+
+  &:focus {
+    background-color: $bg-white;
+    border-color: $color-premium;
+  }
+
+  &.isInvalid {
+    background-color: $bg-input-error;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+}
+
+.note {
+  font-size: 12px;
+  line-height: 1em;
+}
+
+.errorValidationMessage {
+  display: block;
+  padding: 4px 0;
+  color: $color-alert;
+}
+
+.passwordInput {
+  .control {
+    position: relative;
+
+    .input {
+      padding-right: 32px;
+    }
+  }
+}
+
+.passwordVisibilitySwitcher {
+  position: absolute;
+  height: 50%;
+  right: 4%;
+  top: 25%;
+  color: $color-text-base;
+  cursor: pointer;
+  text-align: right;
+
+  &:global(.showPassword) {
+    color: $color-premium;
+  }
+
+  &Icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill 0.25s;
+  }
+}

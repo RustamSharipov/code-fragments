@@ -1,0 +1,15 @@
+@import "settings.css";
+
+.validationMessage {
+  padding: 0.5em 0;
+  color: var(--color-control-passive);
+  font-size: 1.5em;
+}
+
+.isError {
+  color: var(--color-info-warning);
+}
+
+.isSuccess {
+  color: var(--color-info-done);
+}

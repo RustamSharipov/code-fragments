@@ -1,0 +1,14 @@
+.tabBar {
+  height: 48px;
+  margin: 0 -16px 8px;
+  padding: 16px 0 8px;
+  overflow: hidden; // limits swipeable area and removes possible horizontal scrollbar
+  user-select: none;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px; // adds padding to 'move' horizontal bar outside of tab bar area
+  overflow: auto; // gives ability to swipe
+}

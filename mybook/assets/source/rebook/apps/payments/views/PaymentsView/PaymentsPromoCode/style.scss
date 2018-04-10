@@ -1,0 +1,31 @@
+@import "rebook/apps/base/style/_variables";
+
+.redeemCodeTitle {
+  display: flex;
+  cursor: pointer;
+}
+
+.redeemCodeArrow {
+  width: 0px;
+  height: 0px;
+  margin-left: 8px;
+  margin-top: 14px;
+  padding: 0;
+  border: 8px solid transparent;
+  border-top-color: $color-dark-active;
+  transition: transform 0.2s translate 0.2s;
+
+  &::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-top-color: $bg-white;
+    transform: translate(-8px, -12px);
+  }
+
+  &:global(.isExpanded) {
+    transform: rotate(180deg) translateY(8px);
+  }
+}

@@ -1,0 +1,29 @@
+@import "rebook/apps/base/style/_variables";
+
+.pageButton {
+  min-width: 24px;
+  height: 40px;
+  margin: 0 7px;
+  font-family: $font-base;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  color: $color-dark-active;
+  border-radius: 0;
+
+  .button {
+    display: inline-block;
+    height: 100%;
+    margin: 0 auto;
+    padding: 8px 4px;
+  }
+
+  &[disabled] {
+    font-weight: 600;
+    color: $bg-dark;
+
+    .button {
+      border-bottom: 2px solid $bg-dark;
+    }
+  }
+}

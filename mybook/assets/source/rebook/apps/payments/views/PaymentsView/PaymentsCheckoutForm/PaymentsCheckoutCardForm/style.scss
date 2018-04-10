@@ -1,0 +1,12 @@
+@import "rebook/apps/base/style/_variables";
+
+.button {
+  max-width: 248px;
+}
+
+.authForm {
+  margin-top: 16px;
+  padding: 4px 8px 12px;
+  border-radius: 12px;
+  background: $bg-page-base;
+}

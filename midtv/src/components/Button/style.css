@@ -1,0 +1,23 @@
+@import "settings.css";
+
+.button {
+  width: 100%;
+  height: 2.5em;
+  padding: 0 3em;
+  background: var(--color-cta-active);
+  border: 0;
+  border-radius: 4px;
+  color: var(--color-passive-light);
+  font-size: 1.5em;
+  outline: 0;
+  transition: background-color 0.2s;
+  text-align: center;
+  user-select: none;
+}
+.button:disabled {
+  background-color: var(--color-cta-passive);
+}
+.button::-moz-focus-inner {
+  padding: 0;
+  border: 0
+}

@@ -1,0 +1,80 @@
+@import "rebook/apps/base/style/_variables";
+
+.priceSection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $border-light;
+}
+
+.subscriptionType {
+  width: 60%;
+  font-size: 14px;
+  line-height: 1.43em;
+  color: $color-text-base;
+}
+
+.advertPrice {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: $color-text-base;
+}
+
+.total {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29em;
+  text-align: left;
+  color: $color-text-base;
+}
+
+.totalPrice {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25em;
+  color: $color-text-base;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.43em;
+  text-align: left;
+  color: $color-light-text;
+
+  a {
+    cursor: hover;
+    color: $color-dark-active;
+    text-decoration: underline;
+  }
+}
+
+.discountIcon {
+  margin-right: 8px;
+  padding-top: 2px; // fix emoji position
+}
+
+.discount {
+  display: flex;
+  margin-top: 16px;
+
+  small {
+    color: $color-text-base;
+  }
+}
+
+.maxDiscount {
+  margin-top: 16px;
+  color: $color-text-base;
+}
+
+@media (min-width: $md-md) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

@@ -1,0 +1,110 @@
+@import "rebook/apps/base/style/_variables";
+
+.loader {
+  padding-top: 24px;
+}
+
+.paymentsSubscriptionHeader {
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 4%;
+  padding-right: 4%;
+
+  @media (min-width: $md-md) {
+    min-height: 344px;
+  }
+
+  &:global(.themePro) {
+    background-image: linear-gradient(42deg, $payments-premium-dark, $payments-premium-medium 12%, $payments-premium-light);
+  }
+
+  &:global(.themeStandard) {
+    background-image: linear-gradient(42deg, $payments-standard-dark, $payments-standard-light);
+  }
+}
+
+.subscriptionList {
+  background: linear-gradient(to bottom, $payments-subscriptions-dark, $payments-subscriptions-light);
+
+  &Title {
+    padding: 4px 0 12px;
+    text-align: center;
+  }
+}
+
+.subscriptionTitle {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.description {
+  margin: 8px 0 20px;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: $color-text-base;
+  z-index: 1;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navigationTitle {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: $color-dark-active;
+}
+
+.paymentsSubscription {
+  padding: 16px;
+  background: $bg-page-base
+}
+
+.navigationArrow {
+  width: 0px;
+  height: 0px;
+  margin: 0;
+  padding: 0;
+  border: 9px solid transparent;
+  border-top-color: $color-dark-active;
+  transform: rotate(180deg);
+
+  &::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-top-color: $bg-white;
+    transform: translate(-8px, -12px)
+  }
+}
+
+.subscriptionFaq {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $md-md) {
+  .container {
+    height: 344px;
+  }
+
+  .subscriptionLabel {
+    top: auto;
+    right: -82px;
+    bottom: 0;
+  }
+
+  .subscriptionIcon {
+    width: 312px;
+    height: 312px;
+  }
+}

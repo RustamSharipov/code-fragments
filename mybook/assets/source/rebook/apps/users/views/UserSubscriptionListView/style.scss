@@ -1,0 +1,32 @@
+@import "rebook/apps/base/style/_variables";
+
+.autoRebillingNote {
+  padding-left: 24px;
+
+  > *:first-child {
+    position: relative;
+
+    &::before {
+      content: "*";
+      position: absolute;
+      top: 0;
+      left: -16px;
+    }
+  }
+}
+
+.emptySubscriptionList {
+  min-height: 456px;
+  background-image: url("./images/emptySubscriptionList.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  &Links {
+    padding: 16px 0;
+  }
+
+  &Link {
+    width: auto;
+  }
+}

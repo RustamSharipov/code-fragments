@@ -1,0 +1,65 @@
+@import "rebook/apps/base/style/_variables";
+
+.phone {
+  padding: 16px 8px;
+  background: $bg-page-base;
+  border-radius: 12px;
+}
+
+.phoneForm {
+  display: block;
+  max-width: 248px;
+  margin: 0 auto;
+
+  &:global(.isHidden) {
+    display: none;
+  }
+}
+
+.input {
+  background: $bg-white;
+}
+
+.inputLabel {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.29em;
+  color: $bg-dark;
+}
+
+.note {
+  font-size: 14px;
+  line-height: 1.43;
+  color: $color-text-base;
+}
+
+.pending {
+  padding-top: 8px;
+  max-width: 256px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.43em;
+  text-align: center;
+  color: $color-text-base;
+}
+
+.warning {
+  margin-top: 16px;
+  padding: 12px 20px;
+  background: $bg-input-error;
+  border-radius: 12px;
+}
+
+.warningText {
+  font-size: 14px;
+  line-height: 1.43em;
+  text-align: left;
+  color: $color-text-base;
+}
+
+.authForm {
+  margin-top: 16px;
+  padding: 4px 8px 12px;
+  border-radius: 12px;
+  background: $bg-page-base;
+}

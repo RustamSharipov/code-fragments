@@ -1,0 +1,26 @@
+@import "rebook/apps/base/style/_variables";
+
+.giftCodeForm {
+  width: calc(100% - 32px);
+  max-width: 320px;
+  margin: 24px auto;
+
+  &HeaderImage {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100px;
+      height: 86px;
+      margin: 0 0 0 12px;
+      background: url("./images/giftcodeIcon.svg") center center no-repeat;
+    }
+  }
+
+  &Success {
+    text-align: center;
+  }
+
+  @media (min-width: $md-md) {
+    margin-top: 64px;
+  }
+}

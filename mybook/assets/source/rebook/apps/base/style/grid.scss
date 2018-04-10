@@ -1,0 +1,59 @@
+@import "rebook/apps/base/style/_variables";
+
+@mixin grid-column($cols, $grid-size, $screen-width: 100vw) {
+  &:global(.cols-#{$cols}) {
+    max-width: calc(#{$screen-width} / #{$grid-size / $cols});
+  }
+}
+
+:global(.grid) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: $md-xl;
+}
+
+:global(.gridColumn) {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+:global(.grid),
+:global(.gridColumn),
+:global(.gridContainer) {
+  min-width: #{$md-xs};
+  margin-left: auto;
+  margin-right: auto;
+
+  // extra small screen size (iphone 5 and wider)
+  @for $i from 1 through $grid-column-xsmall-count {
+    @include grid-column($i, $grid-column-xsmall-count);
+  }
+
+  // small screen size (iphone 5 and wider)
+  @media (min-width: $md-s) {
+    @for $i from 1 through $grid-column-small-count {
+      @include grid-column($i, $grid-column-small-count);
+    }
+  }
+
+  // medium screen size (ipad portrait and wider)
+  @media (min-width: $md-md) {
+    @for $i from 1 through $grid-column-medium-count {
+      @include grid-column($i, $grid-column-medium-count);
+    }
+  }
+
+  // large screen size (ipad landscape and wider)
+  @media (min-width: $md-lg) and (max-width: $md-xl) {
+    @for $i from 1 through $grid-column-large-count {
+      @include grid-column($i, $grid-column-large-count);
+    }
+  }
+
+  @media (min-width: $md-xl) {
+    @for $i from 1 through $grid-column-large-count {
+      @include grid-column($i, $grid-column-large-count, $md-xl);
+    }
+  }
+}

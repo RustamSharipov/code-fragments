@@ -1,0 +1,21 @@
+@import "rebook/apps/base/style/_variables";
+
+@media (min-width: $md-md) {
+  .subscriptionFaq {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 12px;
+  }
+
+  .faqColumns {
+    column-count: 2;
+
+    h3 {
+      margin-top: 0; // prevent 2 columns margin bug
+    }
+
+    p {
+      break-inside: avoid-column;
+    }
+  }
+}

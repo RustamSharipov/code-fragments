@@ -1,0 +1,9 @@
+@import "rebook/apps/base/style/_variables";
+
+.emptyPaymentList {
+  min-height: 360px;
+  background-image: url("./images/emptyPaymentList.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}

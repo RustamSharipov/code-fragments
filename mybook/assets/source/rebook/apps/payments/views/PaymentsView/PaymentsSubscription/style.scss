@@ -1,0 +1,180 @@
+@import "rebook/apps/base/style/_variables";
+
+.subscriptionsList {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  margin: 8px auto;
+}
+
+.radio input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+}
+
+.radioText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 12px 12px 8px 44px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 1px solid $border-dark;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $border-light;
+    border-radius: 50%;
+    background: $border-dark;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 17px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 5px solid $color-premium;
+    background: $bg-white;
+    opacity: 0;
+    transition: 0.1s;
+  }
+}
+
+.radio input:checked + .radioText:after {
+  opacity: 1;
+}
+
+.radio input:checked + .radioText {
+  background: $bg-light;
+  border-color: $color-premium;
+}
+
+.radioLabel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.months {
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: left;
+  color: $color-text-base;
+}
+
+.advertPrice {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-align: left;
+  color: $bg-dark;
+}
+
+.price {
+  margin-left: 8px;
+  color: $color-light-text;
+}
+
+%icon {
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cardIcon {
+  @extend %icon;
+  width: 185px;
+  height: 33px;
+  background-image: url('./images/cards.svg');
+}
+
+.yandexIcon {
+  @extend %icon;
+  width: 110px;
+  height: 21px;
+  background-image: url('./images/yandex-money.svg');
+}
+
+.paypalIcon {
+  @extend %icon;
+  width: 81px;
+  height: 24px;
+  background-image: url('./images/paypal.svg');
+}
+
+.phoneMethodTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-align: center;
+  color: $bg-dark;
+}
+
+.phoneMethodDescription {
+  font-size: 14px;
+  line-height: 1.43em;
+  text-align: center;
+  color: $color-light-text;
+}
+
+.methodsInfo {
+  font-size: 14px;
+  line-height: 1.43em;
+  text-align: left;
+  color: $color-light-text;
+}
+
+.discountIcon {
+  position: absolute;
+  top: 0;
+  right: -1px; // fix white space between selected radio border and discount sign
+  width: 72px;
+  height: 72px;
+  padding: 10px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+  background: linear-gradient(to top right, transparent 50%, $color-premium 50%);
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+@media (min-width: $md-md) {
+  .radioLabel {
+    width: 49%;
+  }
+
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

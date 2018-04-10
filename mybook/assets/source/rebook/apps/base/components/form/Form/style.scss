@@ -1,0 +1,27 @@
+@import "rebook/apps/base/style/_variables";
+
+.form {
+  padding: 4px;
+  line-height: 1.5em;
+
+  &Control {
+    margin: 4px 0 0;
+    padding: 4px 0;
+  }
+
+  &Row {
+    padding: 8px 0;
+  }
+
+  &Extra {
+    margin: 8px 0 0;
+    padding: 4px 0;
+    color: $color-text-base;
+    font-size: 12px;
+    line-height: 1.43em;
+  }
+
+  &Extra + &Extra {
+    margin-top: 0;
+  }
+}

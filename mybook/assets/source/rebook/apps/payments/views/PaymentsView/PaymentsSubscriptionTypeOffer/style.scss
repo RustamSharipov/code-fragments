@@ -1,0 +1,66 @@
+@import "rebook/apps/base/style/_variables";
+
+.paymentSubscriptionType {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.subscriptionTypeDetail {
+  flex-grow: 1;
+  text-align: center;
+
+  &:global(.themeStandard) {
+    background-image: linear-gradient(to top, $payments-standard-dark, $payments-standard-light);
+  }
+
+  &:global(.themePro) {
+    background-image: linear-gradient(to top, $payments-premium-dark, $payments-premium-light);
+  }
+}
+
+.icon {
+  margin: 8px 0 0;
+  text-align: center;
+
+  .image {
+    width: 64px;
+    height: 64px;
+
+    @media (min-width: $md-md) {
+      width: 112px;
+      height: 112px;
+    }
+
+    @media (min-width: $md-lg) {
+      width: 154px;
+      height: 154px;
+    }
+  }
+}
+
+.toolbox {
+  padding: 8px 0;
+  text-align: center;
+}
+
+.subscriptionButton {
+  max-width: 256px;
+}
+
+.upgradeStandardSubscription {
+  display: flex;
+  align-items: center;
+  background-color: $bg-light;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: $color-text-base;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    background: url("./images/discount.svg") center center no-repeat;
+  }
+}

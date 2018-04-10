@@ -1,0 +1,80 @@
+@import "rebook/apps/base/style/_variables";
+
+.backgroundContainer {
+  flex-grow: inherit;
+  margin-bottom: -16px; // compensation of .article
+  padding-bottom: inherit; // bottom padding
+
+  &:global(.themeGrey) {
+    background-color: $bg-page-base;
+  }
+
+  &:global(.themeYellow) {
+    background: linear-gradient(42deg, $payments-premium-dark, $payments-premium-medium 12%, $payments-premium-light);
+  }
+
+  &:global(.themeBlue) {
+    background: linear-gradient(42deg, $payments-standard-dark, $payments-standard-light);
+  }
+
+  &:global(.themeOrange) {
+    background: linear-gradient(207deg, $payments-subscriptions-light, $payments-subscriptions-dark);
+  }
+}
+
+// Accent block with rounded corners and white (default) background e. g. for forms
+// whole monolith block
+.billetContainer {
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background: $bg-white;
+}
+
+// header only part of the container
+.billetContainerHeader {
+  padding: 8px 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background: $bg-white;
+}
+
+// content only part of the container
+.billetContainerContent {
+  padding: 8px 16px;
+  background: $bg-white;
+
+  // has header top style if using without header
+  &:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  // has footer bottom style if using without footer
+  &:last-child {
+    margin-bottom: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+// footer only part of the container
+.billetContainerFooter {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background: $bg-white;
+}
+
+.tableSummary {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-top: 2px solid $bg-input;
+  line-height: 1.5em;
+
+  &Link {
+    display: block;
+    text-align: center;
+  }
+}

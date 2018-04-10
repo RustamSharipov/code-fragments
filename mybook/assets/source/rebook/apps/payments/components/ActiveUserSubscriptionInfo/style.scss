@@ -1,0 +1,33 @@
+.subscriptionDetail {
+  display: flex;
+}
+
+.title {
+  margin: 4px 0;
+}
+
+.icon {
+  padding: 4px 0;
+}
+
+.icon + .data {
+  padding-left: 8px;
+}
+
+.description {
+  margin: 4px 0;
+}
+
+.autoRebillWarningIcon {
+  display: inline-block;
+
+  &::before {
+    content: "😱";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}

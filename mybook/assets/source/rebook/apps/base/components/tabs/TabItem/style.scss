@@ -1,0 +1,46 @@
+@import "rebook/apps/base/style/_variables";
+
+.item {
+  padding: 0 16px 0 0;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-align: left;
+  white-space: nowrap;
+
+  @media (min-width: $md-sm) {
+    padding-right: 24px;
+  }
+
+  &:first-child {
+    margin-left: 16px; // adds initial left offset to the first element
+  }
+
+  &Content {
+    display: block;
+    position: relative;
+    height: 28px;
+    color: $color-dark-active;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: currentColor;
+      transition: width 0.2s;
+    }
+
+    &:global(.isActive) {
+      color: $bg-dark;
+      cursor: default;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

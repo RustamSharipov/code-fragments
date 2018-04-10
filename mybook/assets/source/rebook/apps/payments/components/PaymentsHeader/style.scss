@@ -1,0 +1,70 @@
+@import "rebook/apps/base/style/_variables";
+
+.paymentsSubscriptionHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $md-md) {
+    padding-right: 256px;
+    min-height: 300px;
+  }
+}
+
+.title {
+  padding-right: 160px;
+
+  @media (min-width: $md-md) {
+    padding-right: 0;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 144px;
+  height: 144px;
+
+  @media (min-width: $md-md) {
+    top: 50%;
+    right: -80px;
+    width: 312px;
+    height: 312px;
+    margin-top: -156px;
+  }
+
+  &Image {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  &:global(.hasGift)::before {
+    content: "";
+    position: absolute;
+    left: 13%;
+    bottom: 12%;
+    width: 72%;
+    height: 72%;
+    background: url("./images/gift.svg") center center no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+.description {
+  margin: 8px 0 20px;
+}
+
+.userSubscription {
+  margin: 16px 0;
+
+  @media (max-width: $md-md) {
+    max-width: 75%;
+  }
+}

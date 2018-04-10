@@ -1,0 +1,10 @@
+:root {
+  /* Colors */
+  --color-passive-light: #ffffff;
+  --color-passive-dark: #999999;
+  --color-control-passive: #e9e9e9;
+  --color-info-warning: #cf5e71;
+  --color-info-done: #aad873;
+  --color-cta-passive: #fad493;
+  --color-cta-active: #f3a633;
+}

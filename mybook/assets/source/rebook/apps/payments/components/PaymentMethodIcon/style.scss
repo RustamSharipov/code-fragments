@@ -1,0 +1,30 @@
+.paymentMethodIcon {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: center center no-repeat;
+
+  &.credit_cardMethodIcon {
+    background-image: url("./images/credit_card.svg");
+  }
+  &.paypalMethodIcon {
+    background-image: url("./images/paypal.svg");
+  }
+  &.yandexmoneyMethodIcon {
+    background-image: url("./images/yandexmoney.svg");
+  }
+  &.smsMethodIcon {
+    background-image: url("./images/sms.svg");
+  }
+  &.google_playMethodIcon {
+    background-image: url("./images/google_play.svg");
+  }
+  &.itunesMethodIcon {
+    top: -3px;
+    background-image: url("./images/itunes.svg");
+  }
+  &.giftMethodIcon {
+    background-image: url("./images/gift.svg");
+  }
+}

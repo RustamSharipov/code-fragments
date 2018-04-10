@@ -1,0 +1,18 @@
+@import "rebook/apps/base/style/_variables";
+
+.subscriptionActiveTill {
+  display: flex;
+  align-items: center;
+  background-color: $input-active;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: $color-text-base;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    background: url("./images/roundedCheck.svg") center center no-repeat;
+  }
+}

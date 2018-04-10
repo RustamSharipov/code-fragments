@@ -1,0 +1,63 @@
+@import "rebook/apps/base/style/_variables";
+
+.socialAuth {
+  margin-top: 8px;
+  padding: 4px 0;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+  margin: 0 -4px;
+}
+
+.item {
+  width: calc(50% - 8px);
+  margin: 0 4px;
+}
+
+.socialNetwork {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  color: $bg-white;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  user-select: none;
+
+  &Icon {
+    margin-right: 8px;
+
+    svg {
+      display: block;
+
+      path {
+        fill: $bg-white;
+      }
+    }
+  }
+
+  &:global(.themeFacebook) {
+    background-color: $color-facebook;
+  }
+  &:global(.themeVK) {
+    background-color: $color-vkontakte;
+  }
+  &:global(.themeTwitter) {
+    background-color: $color-twitter;
+  }
+  &:global(.themeGooglePlus) {
+    background-color: $color-googleplus;
+  }
+  &:global(.themeOdnoklassniki) {
+    background-color: $color-odnoklassniki;
+  }
+  &:global(.themeLitres) {
+    background-color: $color-litres-bg;
+  }
+}
